@@ -28,11 +28,13 @@ class UserController extends Controller
   {
       $this->validate($request, [
           'email' => 'required|email',
-          'password' => 'required|min:6'
+          'password' => 'required|min:6',
+          'nama' => 'required|min:5'
       ]);
 
       $email = $request->input('email');
       $password = $request->input('password');
+      $nama = $request->input('nama');
 
       $user = User::where('email', $email)->first();
       if (!$user) {
