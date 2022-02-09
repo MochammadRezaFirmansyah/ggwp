@@ -17,3 +17,10 @@ $router->post('/login','UserController@login');
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+$router->get('/admin/rangking', 'RangkingController@index');
+$router->get('/admin/rangking/{id}', 'RangkingController@show');
+$router->post('/admin/rangking', 'RangkingController@store');
+$router->put('/admin/rangking/{id}', 'RangkingController@update');
+$router->delete('/admin/rangking/{id}', 'RangkingController@delete');  
+
+
