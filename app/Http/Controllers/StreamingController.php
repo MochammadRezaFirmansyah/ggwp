@@ -16,7 +16,7 @@ class StreamingController extends Controller
 
     public function show($id)
     {
-        $streaming = Streaming::find($id);
+        $streaming = Streaming::find($id)->with(['tournament'])->get();
 
         return response()->json($streaming, 200);
     }

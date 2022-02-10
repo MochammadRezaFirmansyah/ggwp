@@ -16,7 +16,7 @@ class RangkingController extends Controller
 
     public function show($id)
     {
-        $rangking = Rangking::find($id);
+        $rangking = Rangking::find($id)->with(['tournaments'])->get();
 
         return response()->json($rangking, 200);
     }
@@ -33,12 +33,8 @@ class RangkingController extends Controller
     {
         $rangking = Rangking::find($id);
 
-        $rangking->name = request()->input('name');
-<<<<<<< HEAD
+        $rangking->nama = request()->input('nama');
     
-        
-=======
->>>>>>> fd6b2a4d6260ba475ddae484683a6044cf2b00a7
         $rangking->save();
 
         return response()->json($rangking, 200);

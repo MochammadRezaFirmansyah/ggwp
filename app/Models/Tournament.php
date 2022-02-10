@@ -23,6 +23,14 @@ class Tournament extends Model
     {
         return $this->belongsTo(User::class, "id_user");
     }
+    public function streamings()
+    {
+        return $this->hasMany(Streaming::class);
+    }
+    public function rangking()
+    {
+        return $this->hasMany(Rangking::class);
+    }
 
     public $timestamps = true;
 }

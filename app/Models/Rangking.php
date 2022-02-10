@@ -19,4 +19,9 @@ class Rangking extends Model
    ];
 
     public $timestamps = true;
+
+    public function tournaments()
+    {
+        return $this->belongsTo(Tournament::class,'id_tournament');
+    }
 }
