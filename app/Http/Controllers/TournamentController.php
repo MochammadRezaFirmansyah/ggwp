@@ -14,7 +14,7 @@ class TournamentController extends Controller
 
     public function show($id)
     {
-        $tournament = Tournament::find($id);
+        $tournament = Tournament::find($id)->with(['user'])->get();
 
         return response()->json($tournament, 200);
     }

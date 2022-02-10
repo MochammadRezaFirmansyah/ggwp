@@ -33,3 +33,9 @@ $router->get('/admin/tournament/{id}', 'TournamentController@show');
 $router->post('/admin/tournaments', 'TournamentController@store');
 $router->put('/admin/tournament/{id}', 'TournamentController@update');
 $router->delete('/admin/tournament/{id}', 'TournamentController@delete');
+
+$router->get('/admin/medias', 'MediaController@index');
+$router->get('/admin/media/{id}', 'MediaController@show');
+$router->post('/admin/medias', 'MediaController@store');
+$router->put('/admin/media/{id}', 'MediaController@update');
+$router->delete('/admin/media/{id}', 'MediaController@delete');
