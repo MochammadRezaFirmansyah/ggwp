@@ -19,4 +19,9 @@ class Streaming extends Model
    ];
 
     public $timestamps = true;
+
+    public function tournament()
+    {
+        return $this->belongsTo(Tournament::class, "id_tournament");
+    }
 }
