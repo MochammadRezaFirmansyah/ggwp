@@ -22,8 +22,8 @@ $router->post('/admin/rangking', 'RangkingController@store');
 $router->put('/admin/rangking/{id}', 'RangkingController@update');
 $router->delete('/admin/rangking/{id}', 'RangkingController@delete');
 
-$router->get('/admin/users', 'TournamentController@index');
-$router->get('/admin/users/{id}', 'TournamentController@show');
-$router->post('/admin/users', 'TournamentController@store');
-$router->put('/admin/users/{id}', 'TournamentController@update');
-$router->delete('/admin/users/{id}', 'TournamentController@delete');
+$router->get('/admin/tournaments', 'TournamentController@index');
+$router->get('/admin/tournament/{id}', 'TournamentController@show');
+$router->post('/admin/tournaments', 'TournamentController@store');
+$router->put('/admin/tournament/{id}', 'TournamentController@update');
+$router->delete('/admin/tournament/{id}', 'TournamentController@delete');
