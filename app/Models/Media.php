@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tournament extends Model
+class Media extends Model
 {
     use HasFactory;
 
@@ -15,13 +15,10 @@ class Tournament extends Model
      * @var array
      */
     protected $guarded = [];
-    public function media()
+
+    public function tournaments()
     {
-        return $this->hasMany(Media::class);
-    }
-    public function user()
-    {
-        return $this->belongsTo(User::class, "id_user");
+        return $this->belongsTo(Tournament::class, "id_tournament");
     }
 
     public $timestamps = true;
