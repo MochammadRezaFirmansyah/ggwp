@@ -35,7 +35,10 @@ class MediaController extends Controller
     {
         $media = Media::find($id);
 
-        $media->name = request()->input('name');
+        $input = request()->all();
+
+
+        $media->fill($input);
         $media->save();
 
         return response()->json($media, 200);
