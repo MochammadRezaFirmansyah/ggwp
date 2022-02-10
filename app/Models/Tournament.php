@@ -15,9 +15,9 @@ class Tournament extends Model
      * @var array
      */
     protected $guarded = [];
-    public function media()
+    public function medias()
     {
-        return $this->hasMany(Media::class);
+        return $this->hasMany(Media::class, "id_tournament");
     }
     public function user()
     {

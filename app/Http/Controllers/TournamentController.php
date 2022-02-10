@@ -14,7 +14,7 @@ class TournamentController extends Controller
 
     public function show($id)
     {
-        $tournament = Tournament::find($id)->with(['user'])->get();
+        $tournament = Tournament::where(['id' => $id])->with('user', 'medias')->get();
 
         return response()->json($tournament, 200);
     }
@@ -30,9 +30,12 @@ class TournamentController extends Controller
     public function update($id)
     {
         $tournament = Tournament::find($id);
+        $input = request()->all();
 
-        $tournament->name = request()->input('name');
+        $tournament->fill($input);
+
         $tournament->save();
+        
 
         return response()->json($tournament, 200);
     }
