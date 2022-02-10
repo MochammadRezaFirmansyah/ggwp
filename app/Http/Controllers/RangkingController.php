@@ -34,8 +34,11 @@ class RangkingController extends Controller
         $rangking = Rangking::find($id);
 
         $rangking->name = request()->input('name');
+<<<<<<< HEAD
     
         
+=======
+>>>>>>> fd6b2a4d6260ba475ddae484683a6044cf2b00a7
         $rangking->save();
 
         return response()->json($rangking, 200);

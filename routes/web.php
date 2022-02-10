@@ -14,13 +14,13 @@
 */
 $router->post('/register','UserController@register');
 $router->post('/login','UserController@login');
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+
+
 $router->get('/admin/rangking', 'RangkingController@index');
 $router->get('/admin/rangking/{id}', 'RangkingController@show');
 $router->post('/admin/rangking', 'RangkingController@store');
 $router->put('/admin/rangking/{id}', 'RangkingController@update');
+<<<<<<< HEAD
 $router->delete('/admin/rangking/{id}', 'RangkingController@delete');  
 
 $router->get('/admin/streaming', 'StreamingController@index');
@@ -32,4 +32,12 @@ $router->delete('/admin/streaming/{id}', 'StreamingController@delete');
 
 
 
+=======
+$router->delete('/admin/rangking/{id}', 'RangkingController@delete');
+>>>>>>> fd6b2a4d6260ba475ddae484683a6044cf2b00a7
 
+$router->get('/admin/tournaments', 'TournamentController@index');
+$router->get('/admin/tournament/{id}', 'TournamentController@show');
+$router->post('/admin/tournaments', 'TournamentController@store');
+$router->put('/admin/tournament/{id}', 'TournamentController@update');
+$router->delete('/admin/tournament/{id}', 'TournamentController@delete');
