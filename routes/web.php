@@ -23,4 +23,13 @@ $router->post('/admin/rangking', 'RangkingController@store');
 $router->put('/admin/rangking/{id}', 'RangkingController@update');
 $router->delete('/admin/rangking/{id}', 'RangkingController@delete');  
 
+$router->get('/admin/streaming', 'StreamingController@index');
+$router->get('/admin/streaming/{id}', 'StreamingController@show');
+$router->post('/admin/streaming', 'StreamingController@store');
+$router->put('/admin/streaming/{id}', 'StreamingController@update');
+$router->delete('/admin/streaming/{id}', 'StreamingController@delete');  
+
+
+
+
 
